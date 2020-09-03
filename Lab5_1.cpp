@@ -36,12 +36,7 @@ int main(int argc, char *argv[])
    }
 
    pthread_attr_init(&attr);
-
-   // Mutex Lock
-
    pthread_mutex_init(&mutex, NULL);
-
-   // each thread computes fibonacci
 
    for(int i = 1;i <= count;i++) {
 
@@ -51,8 +46,6 @@ int main(int argc, char *argv[])
 
    pthread_join(thread, NULL);    
     }    
-
-   // print resulting array
 
    for (int i = 0; i < in;i++) {
 
